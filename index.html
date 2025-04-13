@@ -3,98 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loan &amp; Subsidy Finder</title>
-  <!-- Link to the external CSS file -->
-  <link rel="stylesheet" href="styles.css" />
+  <title>Framer Assistant for Farmers</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>Loan &amp; Subsidy Finder</h1>
-    <p class="subtitle">Real-time eligibility checking</p>
-
-    <div class="loan-options">
-      <h2>Available Loan Options</h2>
-      <p class="description">Based on your co-op profile</p>
-      
-      <!-- Card 1: Kisan Credit Card -->
-      <div class="loan-card">
-        <div class="loan-text">
-          <h3>Kisan Credit Card</h3>
-          <p>Eligibility:
-            Must be actively engaged in agriculture with proof of ownership, lease, or consistent use of agricultural land.
-
-            Required to be an Indian resident with valid government-issued identification and an acceptable credit or income profile.
-            
-            Apply through participating banks or cooperative societies by submitting the prescribed forms and supporting documents.
-          </p>
-          <p>Up to ₹1,00,000 at 4% interest</p>
-        </div>
-        <div class="loan-status eligible">
-          <!-- Link opens in a new tab -->
-          <span><a href="https://www.myscheme.gov.in/schemes/kcc" target="_blank">View</span></a>
-        </div>
-      </div>
-
-      <!-- Card 2: PM Kisan Maandhan -->
-      <div class="loan-card">
-        <div class="loan-text">
-          <h3>PM Kisan Maandhan</h3>
-          <p>Eligibility:
-            Must be a small or marginal farmer with cultivable land as per state agriculture records (typically limited to small holdings).
-
-Applicant must be an Indian citizen with a valid Aadhaar card and a bank account linked to the scheme.
-
-Excludes institutional landholders, professional farmers, and those already receiving similar government benefits.
-          </p>
-          <p>Up to ₹3,000/month at 2% interest</p>
-        </div>
-        <div class="loan-status eligible">
-          <!-- Link opens in a new tab -->
-          <span><a href="https://maandhan.in/" target="_blank">View</span></a>
-        </div>
-      </div>
-
-      <!-- Card 3: NABARD Subsidy -->
-      <div class="loan-card">
-        <div class="loan-text">
-          <h3>NABARD Subsidy</h3>
-          <p>Eligibility:
-
-Must qualify as a rural or agricultural development project submitted by recognized cooperatives, farmer groups, or rural institutions.
-
-Requires adherence to NABARD’s technical, financial, and environmental guidelines with a comprehensive project proposal.
-
-Offers up to 50% subsidy of the project cost, subject to approval based on detailed evaluation.
-          </p>
-          <p>Up to 50% of project cost at 0% interest</p>
-        </div>
-        <div class="loan-status pending">
-          <!-- Link opens in a new tab -->
-          <span><a href="https://www.nabard.org/content1.aspx?id=23&catid=23&mid=530" target="_blank">View</span></a>
-        </div>
-      </div>
-        <!-- Card 4: TAMIL NADU GOVERNMENT SCHEMES -->
-        <div class="loan-card">
-          <div class="loan-text">
-            <h3>TAMIL NADU GOVERNMENT SCHEMES</h3>
-            <p>Eligibility:
-              Tamil Nadu government schemes for agriculture provide financial assistance through low‑interest crop loans and input subsidies for seeds, fertilizers, and irrigation facilities.
-
-              They integrate crop insurance, extension services, and modern farming techniques to help mitigate risks and enhance productivity.
-              
-              Initiatives like organic farming support, zero‑tillage practices, and improved water management aim to foster sustainable agricultural growth.
-            </p>
-            <p>Up to ₹2,00,000 at 4% interest</p>
-          </div>
-          <div class="loan-status eligible">
-            <!-- Link opens in a new tab -->
-            <span><a href="https://aed.tn.gov.in/en/individual-based-subsidy-schemes/" target="_blank">View</span></a>
-          </div>
-        </div>
-    </div>
-  </div>
+  <!-- Header with Centered Title -->
+  <header>
+    <h1>🌾 Framer Assistant</h1>
+  </header>
   
-  <!-- Link to the external JS file -->
-  <script src="script.js"></script>
+  <!-- Full-height Fixed Sidebar Navigation -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#crop-recommendation">Crop Rec.</a></li>
+        <li><a href="#fertilizer-recommendation">Fertilizer</a></li>
+        <li><a href="#yield">Yield</a></li>
+        <li><a href="#disease">Disease ID</a></li>
+        <li><a href="#chatbot">Chatbot</a></li>
+        <li><a href="#market">Market</a></li>
+        <li><a href="#schemes">Govt. Schemes</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#gap">GAP Community</a></li>
+      </ul>
+    </nav>
+  </aside>
+  
+  <!-- Main Content with left margin to account for the sidebar -->
+  <main>
+    <!-- Crop Recommendation Section -->
+    <section id="crop-recommendation">
+      <h2>🌱 Crop Recommendation</h2>
+      <form>
+        <div class="form-grid">
+          <input type="text" placeholder="Soil pH">
+          <input type="text" placeholder="Nutrient Levels (N, P, K)">
+          <input type="text" placeholder="Soil Texture">
+          <input type="text" placeholder="Organic Matter">
+          <input type="text" placeholder="Temperature">
+          <input type="text" placeholder="Rainfall">
+          <input type="text" placeholder="Humidity">
+          <input type="text" placeholder="Sunlight Exposure">
+          <input type="text" placeholder="State, District">
+          <input type="text" placeholder="Groundwater Availability">
+          <input type="text" placeholder="Irrigation Access">
+          <input type="text" placeholder="Interested Crops (optional)">
+          <input type="text" placeholder="Season (Kharif/Rabi/Zaid)">
+          <input type="text" placeholder="Budget / Market Info">
+        </div>
+        <button type="submit">Recommend Crop</button>
+      </form>
+    </section>
+
+    <!-- Fertilizer Recommendation Section -->
+    <section id="fertilizer-recommendation">
+      <h2>🧪 Fertilizer Recommendation</h2>
+      <form>
+        <div class="form-grid">
+          <input type="text" placeholder="Soil Nutrients (NPK)">
+          <input type="text" placeholder="Soil pH">
+          <input type="text" placeholder="Micro-nutrients">
+          <input type="text" placeholder="Crop Type">
+          <input type="text" placeholder="Growth Stage">
+          <input type="text" placeholder="Weather Conditions">
+          <input type="text" placeholder="Agro-climatic Zone">
+          <input type="text" placeholder="Irrigation Details">
+          <input type="text" placeholder="Previous Fertilizer Use">
+          <input type="text" placeholder="Previous Yields">
+        </div>
+        <button type="submit">Recommend Fertilizer</button>
+      </form>
+    </section>
+
+    <!-- Yield Prediction Section -->
+    <section id="yield">
+      <h2>📈 Yield Prediction</h2>
+      <p>Enter your plot and crop data to estimate your expected yield using the latest AI/ML models.</p>
+    </section>
+
+    <!-- Disease Identification Section -->
+    <section id="disease">
+      <h2>🦠 Disease Identification</h2>
+      <p>Upload an image of your crop for rapid disease diagnosis.</p>
+      <input type="file" accept="image/*">
+    </section>
+
+    <!-- Chatbot Assistant Section -->
+    <section id="chatbot">
+      <h2>💬 Chatbot Assistant</h2>
+      <div class="chat-container">
+        <div class="chat-box">
+          <!-- Preloaded conversation messages -->
+          <div class="chat-message bot">Hello! How can I assist you today with your farming questions?</div>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" id="chat-input" placeholder="Type your question here..." />
+          <button id="chat-send">Send</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market Demand Forecasting Section -->
+    <section id="market">
+      <h2>📊 Market Demand Forecasting</h2>
+      <form>
+        <div class="form-grid">
+          <input type="text" placeholder="State">
+          <input type="text" placeholder="District">
+          <input type="date">
+        </div>
+        <button type="submit">Forecast Demand</button>
+      </form>
+    </section>
+
+    <!-- Government Scheme Eligibility -->
+    <section id="schemes">
+      <h2>🏛️ Government Schemes</h2>
+      <p>Check your eligibility for various government schemes based on your details.</p>
+    </section>
+
+    <!-- Visual Dashboard Section -->
+    <section id="dashboard">
+      <h2>📉 Visual Dashboard</h2>
+      <div class="dashboard-grid">
+        <div>🌧️ Rainfall</div>
+        <div>🌡️ Temperature</div>
+        <div>💧 Humidity</div>
+        <div>🔮 Forecast Trends</div>
+      </div>
+    </section>
+
+    <!-- GAP Community Section -->
+    <section id="gap">
+      <h2>🤝 GAP Community</h2>
+      <p>Join the community of farmers to share and promote Good Agricultural Practices (GAP).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Framer Assistant. Empowering Indian Farmers.</p>
+  </footer>
+
+  <!-- Basic JavaScript for Chatbot Dummy Interaction -->
+  <script>
+    document.getElementById('chat-send').addEventListener('click', function(){
+      const input = document.getElementById('chat-input');
+      const message = input.value.trim();
+      if (message !== ""){
+        const chatBox = document.querySelector('.chat-box');
+        const newMsg = document.createElement('div');
+        newMsg.className = 'chat-message user';
+        newMsg.textContent = message;
+        chatBox.appendChild(newMsg);
+        input.value = '';
+        // Auto-scroll to the latest message
+        chatBox.scrollTop = chatBox.scrollHeight;
+        // Dummy bot reply after a delay
+        setTimeout(() => {
+          const botMsg = document.createElement('div');
+          botMsg.className = 'chat-message bot';
+          botMsg.textContent = "Thanks for your query! Our AI is processing your question.";
+          chatBox.appendChild(botMsg);
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }, 800);
+      }
+    });
+  </script>
 </body>
 </html>
